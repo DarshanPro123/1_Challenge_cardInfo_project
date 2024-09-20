@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 #root {
   max-width: 1280px;
@@ -6,13 +8,13 @@
   padding: 2rem;
 }
 body {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "Gowun Batang", serif;
   background-color: #f7f7f7;
 }
 
 .card {
   width: 500px;
-  height: 600px;
+  height: auto;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -34,13 +36,28 @@ body {
   padding: 10px 30px;
 }
 
-.data h1 {
+h1 {
   font-weight: 600;
-  font-size: 2rem;
 }
 
-.skills span {
-  padding: 5px 30px;
+.data p {
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.497);
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skills div {
   border-radius: 12px;
-  font-size: 1.5rem;
+  padding: 7px;
+  display: flex;
+  gap: 6px;
+}
+
+.skills div span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
 }

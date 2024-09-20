@@ -1,4 +1,5 @@
 import "./App.css";
+import cardData from "../public/data.js";
 
 function App() {
   return (
@@ -52,23 +53,36 @@ export const InfoData = () => {
 export const MySkills = () => {
   return (
     <>
-      <h4>my skilss</h4>
-      <Skill skill="HTML" bg="red" emj="🤟" />
+      {cardData.map((dta) => {
+        return (
+          <>
+            <Skill skill={dta.skill} bg={dta.color} emj={dta.level} />
+          </>
+        );
+      })}
+      {/* <Skill skill="HTML" bg="red" emj="🤟" />
       <Skill skill="CSS" bg="blue" emj="😍" />
-      <Skill skill="JS" bg="green" emj="🫠" />
+      <Skill skill="JS" bg="green" emj="🫠" /> */}
     </>
   );
 };
 
 // eslint-disable-next-line react/prop-types
-export const Skill = ({ bg, skill, emj }) => {
+export const Skill = ({ skill, emj, bg }) => {
+  // props : bg, skill, emj
   return (
     <>
       {" "}
-      <span style={{ backgroundColor: bg }}>
+      {/* <span style={{ backgroundColor: bg }}>
         {skill}
         {emj}
-      </span>
+      </span> */}
+      <div style={{ backgroundColor: bg }}>
+        <span>{skill}</span>
+        <span>{emj === "beginner" && "👼"}</span>
+        <span>{emj === "advanced" && "🏆"}</span>
+        <span>{emj === "intermediate" && "🌟"}</span>
+      </div>
     </>
   );
 };
